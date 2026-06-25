@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+
+:root{
+  --branco: #ffffff;
+  --cor-de-fundo: #1a0e1a;
+  --fundo-senha: #2d1b2e;
+  --fundo-texto: #3d2a3e;
+  --borda: #ff6b9d;
+  --destaque-claro: #ffb3d1;
+  --destaque-escuro: #d63384;
+  --lavanda: #c9a7eb;
+  --roxo: #9b59b6;
+  --roboto: 'Roboto', sans-serif;
+  --roboto-mono: 'Roboto Mono', monospace;
+}
+
+*{
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+body{
+  color: var(--branco);
+  background: linear-gradient(
+    135deg,
+    #1a0e1a,
+    #2d1b2e,
+    #1a0e2e,
+    #3d1f3d
+  );
+  font-family: var(--roboto);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.conteudo{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.conteudo-titulo{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.cadeado{
+  width: 160px;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+  filter: drop-shadow(0 0 10px #ff6b9d);
+  transition: .3s;
+}
+
+.cadeado:hover{
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 20px #ff6b9d);
+}
+
+.titulo-principal{
+  font-family: var(--roboto-mono);
+  font-size: 36px;
+  color: #ff6b9d;
+  text-shadow: 0 0 15px #ff6b9d, 0 0 30px #d63384;
+}
+
+.titulo-secundario{
+  font-size: 22px;
+  color: #e8c9f0;
+}
+
+.parametro-senha-botoes{
+  display: flex;
+  justify-content: center;
+}
+
+.parametro-senha__botao{
+  background: #1a0e1a;
+  color: #ff6b9d;
+  border: 2px solid #ff6b9d;
+  padding: 24px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 8px;
+}
+
+.parametro-senha__botao:hover{
+  background: #ff6b9d;
+  color: #1a0e1a;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff6b9d;
+}
+
+.parametro-senha__texto{
+  padding: 24px;
+  border-top: 2px solid var(--borda);
+  border-bottom: 2px solid var(--borda);
+  margin: 0;
+  font-size: 24px;
+  color: #ffb3d1;
+}
+
+label{
+  font-size: 20px;
+  color: #e8c9f0;
+}
+
+.checkbox{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #ff6b9d;
+}
+
+.parametro-senha__titulo{
+  color: #ffb3d1;
+}
+
+.barra{
+  background-color: #3d2a3e;
+  height: 30px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.forca{
+  height: 30px;
+  position: relative;
+  bottom: 30px;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.fraca{
+  width: 25%;
+  background: #ff6b6b;
+  box-shadow: 0 0 20px #ff6b6b;
+}
+
+.media{
+  width: 50%;
+  background: #ffb347;
+  box-shadow: 0 0 20px #ffb347;
+}
+
+.forte{
+  width: 100%;
+  background: #c9a7eb;
+  box-shadow: 0 0 20px #c9a7eb;
+}
+
+.parametro-senha-textos{
+  display: flex;
+  justify-content: space-between;
+  color: #e8c9f0;
+}
+
+.entropia{
+  color: #d4b8e0;
+  line-height: 1.5;
+}
+
+#campo-senha{
+  background: #2d1b2e;
+  border: 2px solid #ff6b9d;
+  border-radius: 8px;
+  color: #ffb3d1;
+  font-size: 28px;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: center;
+  transition: .3s;
+  font-family: var(--roboto-mono);
+}
+
+#campo-senha:hover{
+  border-color: #ffb3d1;
+  box-shadow: 0 0 20px #ff6b9d;
+}
+
+.conteudo-senha{
+  margin: 30px 0;
+}
+
+.parametro-titulo{
+  color: #ffb3d1;
+  font-size: 26px;
+  text-shadow: 0 0 10px #d63384;
+}
+
+.footer{
+  background: #2d1b2e;
+  color: #b896c4;
+  text-align: center;
+  padding: 25px;
+  margin-top: 80px;
+  border-top: 1px solid #4a2b4a;
+}
+
+.footer .container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer p{
+  margin: 8px 0;
+}
+
+.footer strong{
+  color: #ff6b9d;
+}
+
+.footer-links{
+  margin-top: 12px;
+}
+
+.footer-links a{
+  color: #c9a7eb;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.footer-links a:hover{
+  color: #ff6b9d;
+  text-shadow: 0 0 10px #ff6b9d;
+}
+
+@media screen and (max-width: 768px){
+  .titulo-principal{
+    font-size: 28px;
+  }
+
+  .titulo-secundario{
+    font-size: 18px;
+  }
+
+  #campo-senha{
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .parametro-senha{
+    width: 100%;
+  }
+
+  .cadeado{
+    width: 90px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .parametro-coluna__senha{
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}
