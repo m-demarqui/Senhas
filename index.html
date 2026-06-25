@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Senhas - Maria Clara</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .conteudo-titulo {
+        text-align: center;
+        margin-top: 60px;
+      }
+
+      .cadeado {
+        width: 140px;
+        height: auto;
+        display: block;
+        margin: 0 auto 15px auto;
+        filter: drop-shadow(0 0 10px #ff6b9d);
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="conteudo">
+      <div class="conteudo-titulo">
+        <img
+          src="cadeado.png"
+          alt="cadeado fechado"
+          class="cadeado"
+        />
+
+        <h2 class="titulo-principal">Gerador de Senhas de Maria Clara Demarqui</h2>
+
+        <h3 class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura.</h3>
+      </div>
+
+      <div class="conteudo-senha">
+        <label for="campo-senha">Senha</label>
+
+        <input
+          name="senha"
+          type="text"
+          id="campo-senha"
+          readonly
+          value=""
+        />
+      </div>
+
+      <div class="parametro">
+        <h3 class="parametro-titulo">Personalize sua senha</h3>
+
+        <div class="parametro-coluna__senha">
+          <div class="parametro-senha">
+            <h4 class="parametro-senha__titulo">Número de caracteres</h4>
+
+            <div class="parametro-senha-botoes">
+              <button class="parametro-senha__botao" type="button">-</button>
+
+              <p class="parametro-senha__texto">12</p>
+
+              <button class="parametro-senha__botao" type="button">+</button>
+            </div>
+          </div>
+
+          <div class="parametro-senha">
+            <h4 class="parametro-senha__titulo">Características da senha</h4>
+
+            <div class="parametro-senha-checkbox">
+              <input name="maiusculo" type="checkbox" class="checkbox" checked id="cb-maiusculo" />
+              <label for="cb-maiusculo">Letras maiúsculas</label>
+            </div>
+
+            <div class="parametro-senha-checkbox">
+              <input name="minusculo" type="checkbox" class="checkbox" id="cb-minusculo" />
+              <label for="cb-minusculo">Letras minúsculas</label>
+            </div>
+
+            <div class="parametro-senha-checkbox">
+              <input name="numero" type="checkbox" class="checkbox" id="cb-numero" />
+              <label for="cb-numero">Números</label>
+            </div>
+
+            <div class="parametro-senha-checkbox">
+              <input name="simbolo" type="checkbox" class="checkbox" id="cb-simbolo" />
+              <label for="cb-simbolo">Símbolos</label>
+            </div>
+          </div>
+
+          <div class="parametro-senha">
+            <h4 class="parametro-senha__titulo">Força da senha</h4>
+
+            <div class="barra"></div>
+
+            <!-- Indicador que o JS troca a classe: fraca/media/forte -->
+            <div class="forca fraca"></div>
+
+            <div class="parametro-senha-textos">
+              <p>Fraca</p>
+              <p>Média</p>
+              <p>Forte</p>
+            </div>
+
+            <p class="entropia"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <strong>Gerador de Senhas de Maria Clara Demarqui</strong>
+        </p>
+
+        <p>
+          Desenvolvido por <strong>Maria Clara Demarqui</strong>
+        </p>
+
+        <p>
+          Projeto para estudo de JavaScript • <span id="ano-atual"></span>
+        </p>
+
+        <div class="footer-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
